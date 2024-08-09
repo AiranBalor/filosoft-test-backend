@@ -2,9 +2,9 @@ import { PDFDocument, rgb } from 'pdf-lib'
 
 export async function generatePDF(words: string[]): Promise<Uint8Array> {
     const pdfDoc = await PDFDocument.create()
-    const page = pdfDoc.addPage([600, 400])
+    const page = pdfDoc.addPage([1600, 1400])
     const { height } = page.getSize()
-    const fontSize = 30
+    const fontSize = 16
     let y = height - fontSize * 2
   
     page.drawText('Top 10 Longest Words:', {
